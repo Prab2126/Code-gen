@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code genrater</title>
+    <script src="JS/genrater.js" defer></script>
+
+    <link rel="stylesheet" href="CSS/genrater.css" />
+  </head>
+  <body>
+    <main>
+      <div class="hover-cursor"></div>
+
+      <div class="contener">
+        <aside class="side-button-area">
+          <div class="buttons-area">
+            <button id="side-btn1">Button</button>
+            <button id="side-btn2">Custom Radius</button>
+            <!-- <button id="side-btn4">Grid</button>
+        <button id="side-btn5">Gradient</button> -->
+          </div>
+        </aside>
+        <!-- button side -->
+        <div class="big-area">
+          <nav class="main1">
+            <div class="tools-area">
+              <!--shadow -->
+
+              <div class="shadow same-box">
+                <div class="shadow-header same-title">Shadow</div>
+                <label for="shadow-X">shadow x </label>
+                <input
+                  type="range"
+                  min="-100"
+                  value="6"
+                  max="100"
+                  id="shadow-X"
+                />
+
+                <label for="shadow-Y">shadow y </label>
+                <input
+                  type="range"
+                  min="-100"
+                  value="3"
+                  max="100"
+                  id="shadow-Y"
+                />
+
+                <label for="shadow-blur">shadow blur </label>
+                <input type="range" value="0" max="100" id="shadow-blur" />
+
+                <label for="shadow-range">shadow range </label>
+                <input
+                  type="range"
+                  min="-100"
+                  value="1"
+                  max="100"
+                  id="shadow-range"
+                />
+
+                <label for="shadow-color">shadow color </label>
+                <input type="color" id="shadow-color" />
+
+                <label>Inset</label>
+                <div id="inset-off-toggle"></div>
+              </div>
+
+              <!-- text -->
+              <div class="text same-box">
+                <div class="text-header same-title">text</div>
+
+                <label for="text-size">text size </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="25"
+                  max="100"
+                  id="text-size"
+                />
+
+                <label for="bold-text">bold text </label>
+                <input
+                  type="range"
+                  step="100"
+                  value="100"
+                  min="100"
+                  max="900"
+                  id="bold-text"
+                />
+
+                <label for="letter-gap">letter gap </label>
+                <input
+                  type="range"
+                  min="-50"
+                  max="100"
+                  value="0"
+                  id="letter-gap"
+                />
+
+                <label for="text-gap">text gap </label>
+                <input
+                  type="range"
+                  min="-50"
+                  value="0"
+                  max="100"
+                  id="text-gap"
+                />
+
+                <label for="text-color">text color </label>
+                <input type="color" id="text-color" />
+              </div>
+              <!-- padding -->
+              <div class="padding same-box">
+                <div class="padding-header same-title">padding</div>
+
+                <label for="padding">padding </label>
+                <input type="range" min="0" value="10" max="200" id="padding" />
+
+                <label for="padding-top">padding top </label>
+                <input
+                  type="range"
+                  min="0"
+                  class="btn_same_padding"
+                  value="10"
+                  max="200"
+                  id="padding-top"
+                />
+
+                <label for="padding-right">padding right </label>
+                <input
+                  type="range"
+                  min="0"
+                  class="btn_same_padding"
+                  value="10"
+                  max="200"
+                  id="padding-right"
+                />
+
+                <label for="padding-bottom">padding bottom </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="10"
+                  max="200"
+                  class="btn_same_padding"
+                  id="padding-bottom"
+                />
+
+                <label for="padding-left">padding left </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="10"
+                  max="200"
+                  class="btn_same_padding"
+                  id="padding-left"
+                />
+              </div>
+              <!-- border-->
+              <div class="border same-box">
+                <div class="border-header same-title">border</div>
+
+                <label for="border-top">border top width </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="4"
+                  max="150"
+                  id="border-top"
+                />
+
+                <label for="border-right">border right width </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="4"
+                  max="150"
+                  id="border-right"
+                />
+
+                <label for="border-bottom">border bottom width </label>
+                <input
+                  type="range"
+                  min="0"
+                  max="150"
+                  value="4"
+                  id="border-bottom"
+                />
+
+                <label for="border-left">border left width </label>
+                <input
+                  type="range"
+                  min="0"
+                  max="150"
+                  value="4"
+                  id="border-left"
+                />
+
+                <label for="border-width">border width </label>
+                <input
+                  type="range"
+                  min="0"
+                  max="150"
+                  value="4"
+                  id="border-width"
+                />
+
+                <label for="border-type">border type</label>
+                <select id="border-type">
+                  <option value="solid">solid</option>
+                  <option value="dotted">dotted</option>
+                  <option value="double">double</option>
+                  <option value="dashed">dashed</option>
+                  <option value="groove">groove</option>
+                </select>
+
+                <label for="border-color">border color </label>
+                <input type="color" id="border-color" />
+              </div>
+
+              <!-- border-radius -->
+              <div class="border-radius same-box">
+                <div class="border-radius-header same-title">border-radius</div>
+                <label for="border-radius">border-radius </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="10"
+                  max="200"
+                  id="border-radius"
+                />
+
+                <label for="border-radius-top-left"
+                  >border-radius top-left
+                </label>
+                <input
+                  type="range"
+                  min="0"
+                  class="btn_same_border-radius"
+                  value="0"
+                  max="200"
+                  id="border-radius-top-left"
+                />
+
+                <label for="border-radius-top-right"
+                  >border-radius top-right
+                </label>
+                <input
+                  type="range"
+                  min="0"
+                  class="btn_same_border-radius"
+                  value="0"
+                  max="200"
+                  id="border-radius-top-right"
+                />
+
+                <label for="border-radius-bottom-left"
+                  >border-radius bottom-left
+                </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="0"
+                  max="200"
+                  class="btn_same_border-radius"
+                  id="border-radius-bottom-left"
+                />
+
+                <label for="border-radius-bottom-right"
+                  >border-radius bottom-right
+                </label>
+                <input
+                  type="range"
+                  min="0"
+                  value="0"
+                  max="200"
+                  class="btn_same_border-radius"
+                  id="border-radius-bottom-right"
+                />
+              </div>
+
+              <!-- basic-->
+              <div class="basic same-box">
+                <div class="basic-header same-title">basic</div>
+
+                <label for="width"> width </label>
+                <input type="range" value="168" min="0" max="400" id="width" />
+
+                <label for="height"> height </label>
+                <input type="range" min="0" value="56" max="400" id="height" />
+
+                <label for="background-color"> background color </label>
+                <input type="color" id="background-color" />
+              </div>
+            </div>
+            <div class="preview-area">
+              <div class="button-perview">
+                <button class="btn-preview">Boss power</button>
+              </div>
+              <div class="code-preview">
+                <div class="code-preview-copy">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon-sm"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span class="Clipboard">Code Copy</span>
+                </div>
+
+                <div class="all-border-copy">
+                  <!-- shadow -->
+                  <div class="shadow-preview-div" style="display: none">
+                    box-shadow:
+                    <span class="shadow-preview-Inset"></span>
+                    <span class="shadow-preview-x">6px</span>
+                    <span class="shadow-preview-y">3px</span>
+                    <span class="shadow-preview-blur">0px</span>
+                    <span class="shadow-preview-spread">1px</span>
+                    <span class="shadow-preview-color">#44ff00</span>
+                    ;
+                  </div>
+
+                  <!-- border-radius -->
+                  <div class="border-radius-preview-div" style="display: none">
+                    border-radius:
+                    <span class="border-radius-preview">0px</span>
+                    <span class="border-radius-preview-top-left">0px</span>
+                    <span class="border-radius-preview-top-right">0px</span>
+                    <span class="border-radius-preview-bottom-left">0px</span>
+                    <span class="border-radius-preview-bottom-right">0px</span>
+                    ;
+                  </div>
+
+                  <!-- border -->
+                  <div class="different-border-div">
+                    <div class="border-width">
+                      border-width:
+                      <span class="border-preview-top">0</span>
+                      <span class="border-preview-right">0</span>
+                      <span class="border-preview-bottom">0</span>
+                      <span class="border-preview-left">0</span>;
+                    </div>
+                    <div class="border-type">
+                      border-style:<span class="border-preview-type-direction"
+                        >solid</span
+                      >;
+                    </div>
+                    <div class="border-color">
+                      border-color:<span class="border-preview-color-direction"
+                        >#ffff</span
+                      >;
+                    </div>
+                  </div>
+
+                  <div class="border-preview-div" style="display: none">
+                    border:
+                    <span class="border-preview-width">0</span>
+                    <span class="border-preview-type">solid</span>
+                    <span class="border-preview-color">#ffff</span>
+                    ;
+                  </div>
+
+                  <!-- padding-->
+                  <div class="padding-preview-div" style="display: none">
+                    padding:
+                    <span class="padding-preview">0</span>
+                    <span class="padding-preview-top">0</span>
+                    <span class="padding-preview-right">0</span>
+                    <span class="padding-preview-bottom">0</span>
+                    <span class="padding-preview-left">0</span>
+                    ;
+                  </div>
+                  <!-- width-->
+                  <div class="width-preview-div" style="display: none">
+                    width:<span class="width-preview">auto</span>
+                    ;
+                  </div>
+
+                  <!-- height-->
+                  <div class="height-preview-div" style="display: none">
+                    height:<span class="height-preview">auto</span>
+                    ;
+                  </div>
+
+                  <!-- background-->
+                  <div class="background-preview-div" style="display: none">
+                    background:<span class="background-preview">none</span>
+                    ;
+                  </div>
+
+                  <!-- font-weight-->
+                  <div class="font-weight-preview-div" style="display: none">
+                    font-weight:<span class="font-weight-preview">100</span>
+                    ;
+                  </div>
+
+                  <!-- font-size-->
+                  <div class="font-size-preview-div" style="display: none">
+                    font-size:<span class="font-size-preview">29px</span>
+                    ;
+                  </div>
+
+                  <!-- letter-spacing-->
+                  <div class="letter-spacing-preview-div" style="display: none">
+                    letter-spacing:<span class="letter-spacing-preview">0</span>
+                    ;
+                  </div>
+
+                  <!-- word-spacing-->
+                  <div class="word-spacing-preview-div" style="display: none">
+                    word-spacing:<span class="word-spacing-preview">0</span>
+                    ;
+                  </div>
+
+                  <!-- text-color-->
+                  <div class="text-color-preview-div" style="display: none">
+                    color:<span class="text-color-preview">white</span>
+                    ;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <nav class="main2">
+            <div class="preview-border-radiusEffect">
+              <div class="borderRadiusDIV">
+                <input type="range" id="top_radius" />
+                <input type="range" id="right_radius" />
+                <input type="range" id="bottom_radius" />
+                <input type="range" id="left_radius" />
+              </div>
+            </div>
+            <div class="preview-border-radiusCode">
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon-sm"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span class="Clipboard">Code Copy</span>
+              </div>
+              <div class="propery">
+                border-radius:
+                <span class="one_radius_span"> 0% </span
+                ><span class="one_radius_span"> 100% </span
+                ><span class="two_radius_span"> 0% </span
+                ><span class="two_radius_span"> 100% </span>
+                <span id="slace">/</span>
+                <span class="three_radius_span"> 100% </span
+                ><span class="four_radius_span"> 100% </span
+                ><span class="four_radius_span"> 0% </span
+                ><span class="three_radius_span"> 0% </span>;
+              </div>
+            </div>
+          </nav>
+
+          <!-- 
+<nav class="main3">
+    <div class="grid-area">
+    </div>
+
+    <div class="grid-input-area">
+        <label>Column</label>
+        <input id="column" max="30" type="range">
+
+        <label>Row</label>
+        <input id="row" min="1" max="30" type="range">
+
+
+        <label>Gap-X</label>
+        <input id="gap-X" type="range">
+
+
+        <label>Gap-Y</label>
+        <input id="gap-Y" type="range">
+<div class="codePreview">
+    display:grid;
+    <br>
+    <div class="one-grid-code">
+        grid-template-columns: ;
+
+    </div>
+    <div class="two-grid-code">
+        grid-template-rows: ;
+    </div>
+    <div class="three-grid-code">
+        grid-row-gap: <span class="gap-x">1</span> <span class="gap-y"> 2</span> ;
+
+    </div>
+  
+
+
+</div>
+    </div>
+</nav> -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
